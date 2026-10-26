@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="ETERNAL Watches — relojes y accesorios para definir tu estilo. Envíos en Colombia y pedidos por WhatsApp.">
+  <title>ETERNAL Watches | El tiempo define tu estilo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#090909;--panel:#121212;--panel2:#181818;--gold:#d6b36a;--gold2:#f0dba4;--text:#f6f3ed;--muted:#a9a49b;--line:#2b2925}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none}button,input,select{font:inherit}.announcement{background:var(--gold);color:#14110a;text-align:center;padding:9px 12px;font-size:12px;font-weight:700;letter-spacing:.12em}
+    header{position:sticky;top:0;z-index:20;background:rgba(9,9,9,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1180px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:10px}.crown{color:var(--gold);font-size:25px;line-height:1}.brand-name{font-family:"Playfair Display",serif;font-size:22px;letter-spacing:.16em}.brand-sub{display:block;color:var(--gold);font-size:9px;letter-spacing:.28em;margin-top:3px}
+    .navlinks{display:flex;gap:26px;color:#d0ccc4;font-size:13px}.navlinks a:hover{color:var(--gold)}.cart-btn{border:1px solid var(--gold);color:var(--gold);padding:10px 13px;background:transparent;cursor:pointer;border-radius:2px;font-size:12px}
+    .hero{max-width:1180px;margin:auto;min-height:550px;padding:70px 22px 64px;display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:35px}
+    .eyebrow{color:var(--gold);letter-spacing:.25em;text-transform:uppercase;font-size:11px;font-weight:700}.hero h1{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(42px,6vw,76px);line-height:1.03;margin:20px 0}.hero h1 em{font-style:normal;color:var(--gold)}.hero p{color:var(--muted);line-height:1.8;max-width:460px;font-size:15px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border:1px solid var(--gold);font-size:12px;font-weight:700;letter-spacing:.08em;cursor:pointer;transition:.2s}.btn-primary{background:var(--gold);color:#15110a}.btn-primary:hover{background:var(--gold2)}.btn-outline{color:var(--gold);background:transparent}.btn-outline:hover{background:#1c1912}
+    .hero-art{position:relative;min-height:400px;border:1px solid #3a3020;background:radial-gradient(ellipse at 50% 45%,#33291b 0%,#17130e 38%,#0d0d0c 75%);display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid rgba(214,179,106,.2);border-radius:50%;width:340px;height:340px}.hero-art:after{width:440px;height:440px}
+    .hero-watch{position:relative;z-index:1;width:min(76%,340px);aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 25px 24px #000);border-radius:8px;mix-blend-mode:screen}
+    .art-label{position:absolute;bottom:20px;right:20px;color:var(--gold);font-size:10px;letter-spacing:.2em}
+    .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);max-width:1180px;margin:auto;padding:22px}.trust div{text-align:center;padding:8px 12px;border-right:1px solid var(--line)}.trust div:last-child{border:0}.trust strong{display:block;font-size:12px;letter-spacing:.08em}.trust span{display:block;color:var(--muted);font-size:11px;margin-top:6px}
+    section.catalog{max-width:1180px;margin:auto;padding:80px 22px}.section-head{text-align:center;margin-bottom:34px}.section-head h2{font:500 clamp(32px,4vw,46px) "Playfair Display",serif;margin:12px 0}.section-head p{color:var(--muted);font-size:13px}
+    .filters{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:24px 0 32px}.filter{padding:9px 15px;border:1px solid var(--line);background:transparent;color:#c8c2b8;cursor:pointer;font-size:11px}.filter.active,.filter:hover{border-color:var(--gold);color:var(--gold)}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.product{border:1px solid var(--line);background:var(--panel);transition:transform .2s,border-color .2s;overflow:hidden}.product:hover{transform:translateY(-4px);border-color:#66512c}.product-image{height:265px;background:linear-gradient(145deg,#20201d,#10100f);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.product-image img{width:100%;height:100%;object-fit:contain;padding:18px}.placeholder-watch{font-size:74px;color:var(--gold);opacity:.65}.tag{position:absolute;top:13px;left:13px;background:var(--gold);color:#17120a;padding:6px 8px;font-size:9px;font-weight:700;letter-spacing:.1em}
+    .product-info{padding:18px}.product-category{font-size:9px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase}.product h3{font:500 22px "Playfair Display",serif;margin:8px 0}.product p{font-size:12px;color:var(--muted);line-height:1.6;min-height:38px}.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:15px}.price{font-weight:700;font-size:17px}.add-btn{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:10px 12px;cursor:pointer;font-size:11px}.add-btn:hover{background:var(--gold);color:#111}
+    .note{max-width:800px;margin:25px auto 0;text-align:center;color:#8e887e;font-size:11px;line-height:1.7}
+    .story{background:linear-gradient(100deg,#17140f,#0d0d0c);border-block:1px solid var(--line)}.story-inner{max-width:900px;margin:auto;padding:65px 22px;text-align:center}.story h2{font:500 38px "Playfair Display",serif;margin:14px 0}.story p{max-width:660px;margin:0 auto;color:var(--muted);font-size:14px;line-height:1.9}
+    .faq{max-width:850px;margin:auto;padding:65px 22px}.faq h2{text-align:center;font:500 36px "Playfair Display",serif}.faq details{border-bottom:1px solid var(--line);padding:18px 2px}.faq summary{cursor:pointer;font-size:13px}.faq details p{color:var(--muted);font-size:12px;line-height:1.7}
+    footer{border-top:1px solid var(--line);padding:34px 22px 22px;text-align:center}.footer-brand{font:500 24px "Playfair Display",serif;letter-spacing:.18em}.footer-brand span{color:var(--gold)}footer p{color:var(--muted);font-size:11px;line-height:1.8}.social{display:flex;justify-content:center;gap:18px;color:var(--gold);font-size:12px;margin:18px 0}
+    .drawer-backdrop{position:fixed;inset:0;background:#0009;z-index:50;display:none}.drawer{position:absolute;right:0;top:0;height:100%;width:min(420px,100%);background:#111;padding:24px;overflow:auto;border-left:1px solid var(--line)}.drawer-head{display:flex;justify-content:space-between;align-items:center}.drawer h2{font:500 28px "Playfair Display",serif}.close{background:none;color:var(--text);border:1px solid var(--line);padding:8px 11px;cursor:pointer}.cart-item{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:14px 0;font-size:12px}.cart-item small{display:block;color:var(--muted);margin-top:5px}.remove{background:none;color:var(--gold);border:0;cursor:pointer}.cart-total{display:flex;justify-content:space-between;margin:22px 0;font-weight:700}.checkout-fields{display:grid;gap:10px}.checkout-fields input,.checkout-fields textarea{width:100%;padding:12px;background:#1b1b1b;border:1px solid #34312a;color:white;outline:none}.checkout-fields label{font-size:11px;color:var(--muted)}.checkout-fields .btn{width:100%}.tiny{font-size:10px;color:#918a7e;line-height:1.6}
+    @media(max-width:760px){.nav{padding:13px 16px}.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:48px;gap:28px}.hero-art{min-height:300px}.hero h1{font-size:48px}.trust{padding:12px 6px}.trust div{padding:8px 5px}.trust strong{font-size:10px}.trust span{font-size:9px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product-image{height:190px}.product-info{padding:12px}.product h3{font-size:18px}.product p{font-size:11px}.price-row{align-items:flex-start;flex-direction:column}.add-btn{width:100%}section.catalog{padding:60px 14px}.product .price{font-size:15px}}
+    @media(max-width:420px){.grid{grid-template-columns:1fr}.product-image{height:250px}.brand-name{font-size:19px}.hero h1{font-size:42px}}
+  </style>
+</head>
+<body>
+  <div class="announcement">ENVÍOS A TODA COLOMBIA · CONSULTA DISPONIBILIDAD Y PAGO CONTRA ENTREGA</div>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#inicio" aria-label="ETERNAL inicio"><span class="crown">♛</span><span><span class="brand-name">ETERNAL</span><span class="brand-sub">WATCHES & ACCESSORIES</span></span></a>
+      <div class="navlinks"><a href="#inicio">Inicio</a><a href="#catalogo">Colección</a><a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas</a></div>
+      <button class="cart-btn" onclick="openCart()">BOLSA (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div>
+        <div class="eyebrow">Detalles que hablan por ti</div>
+        <h1>El tiempo<br>define <em>tu estilo.</em></h1>
+        <p>Descubre relojes que acompañan tu personalidad. Diseños versátiles para cada ocasión, desde el día a día hasta tus momentos especiales.</p>
+        <div class="actions"><a class="btn btn-primary" href="#catalogo">EXPLORAR COLECCIÓN</a><a class="btn btn-outline" href="#nosotros">CONOCE ETERNAL</a></div>
+      </div>
+      <div class="hero-art">
+        <img class="hero-watch" src="assets/hero-watch.jpg" alt="Reloj destacado ETERNAL" onerror="this.style.display='none';document.getElementById('heroFallback').style.display='block'">
+        <div id="heroFallback" style="display:none;text-align:center;z-index:2"><div style="font-size:100px;color:#d6b36a">◷</div><div style="letter-spacing:.3em;color:#d6b36a;font-size:12px">ETERNAL COLLECTION</div></div>
+        <div class="art-label">ESTILO ATEMPORAL · 01</div>
+      </div>
+    </section>
+    <div class="trust"><div><strong>✦ ESTILO ATEMPORAL</strong><span>Diseños para cada ocasión</span></div><div><strong>↗ ENVÍOS NACIONALES</strong><span>Consulta cobertura y tiempos</span></div><div><strong>◇ COMPRA ACOMPAÑADA</strong><span>Atención directa por WhatsApp</span></div></div>
+    <section class="catalog" id="catalogo">
+      <div class="section-head"><div class="eyebrow">Encuentra tu próximo favorito</div><h2>La colección ETERNAL</h2><p>Explora los modelos disponibles y consulta antes de realizar tu pedido.</p></div>
+      <div class="filters" id="filters"><button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="Clásicos">Clásicos</button><button class="filter" data-filter="Modernos">Modernos</button><button class="filter" data-filter="Elegantes">Elegantes</button></div>
+      <div class="grid" id="product-grid"></div>
+      <p class="note">Catálogo inicial de demostración. Antes de publicar, reemplaza los productos, precios y fotografías de ejemplo por la información real y vigente de tu proveedor Dropi. La disponibilidad, el costo del envío y el pago contra entrega deben confirmarse antes de aceptar cada pedido.</p>
+    </section>
+    <section class="story" id="nosotros"><div class="story-inner"><div class="eyebrow">Nuestra esencia</div><h2>Menos ruido. Más carácter.</h2><p>ETERNAL nace para quienes entienden que el estilo está en los detalles. Queremos ayudarte a encontrar un reloj que conecte con tu forma de vivir, vestir y expresarte. Nuestro equipo confirma contigo la referencia, disponibilidad, envío y condiciones de compra antes de tramitar cada pedido.</p><div class="actions" style="justify-content:center"><button class="btn btn-primary" onclick="contactWhatsApp('Hola, quiero conocer la colección ETERNAL Watches.')">CONSULTAR POR WHATSAPP</button></div></div></section>
+    <section class="faq" id="preguntas"><h2>Preguntas frecuentes</h2>
+      <details><summary>¿Cómo realizo un pedido?</summary><p>Añade los modelos que te interesan a la bolsa, completa tus datos y envía el pedido por WhatsApp. Te confirmaremos la disponibilidad y el valor total antes de procesarlo.</p></details>
+      <details><summary>¿Hacen envíos a toda Colombia?</summary><p>La cobertura, el costo y el tiempo estimado dependen de la dirección y del proveedor logístico. Confirma estos datos antes de finalizar la compra.</p></details>
+      <details><summary>¿Puedo pagar contra entrega?</summary><p>El pago contra entrega depende de la cobertura y de las condiciones del proveedor y transportadora. Se debe confirmar para tu pedido antes de despacharlo.</p></details>
+      <details><summary>¿Los productos están disponibles?</summary><p>La disponibilidad puede cambiar. Cada pedido se confirma manualmente con el proveedor antes de procesarse.</p></details>
+    </section>
+  </main>
+  <footer><div class="footer-brand">ETERNAL <span>WATCHES</span></div><p>El tiempo define tu estilo.</p><div class="social"><a href="#" onclick="contactWhatsApp('Hola, quiero información de ETERNAL Watches.');return false">WhatsApp</a><a href="https://www.instagram.com/eternalwatches.co/" target="_blank" rel="noopener">Instagram @eternalwatches.co</a></div><p>© <span id="year"></span> ETERNAL Watches. Todos los derechos reservados.</p></footer>
+  <div class="drawer-backdrop" id="cart-backdrop" onclick="if(event.target===this)closeCart()"><aside class="drawer" aria-label="Bolsa de compras"><div class="drawer-head"><h2>Tu bolsa</h2><button class="close" onclick="closeCart()">Cerrar ✕</button></div><div id="cart-items"></div><div class="cart-total"><span>Total estimado</span><span id="cart-total">$0 COP</span></div><div class="checkout-fields"><label>Tu nombre<input id="customer-name" autocomplete="name" placeholder="Nombre y apellido"></label><label>Ciudad de entrega<input id="customer-city" autocomplete="address-level2" placeholder="Ciudad, departamento"></label><label>Nota para el pedido (opcional)<textarea id="customer-note" rows="2" placeholder="Referencias, colores o dudas"></textarea></label><button class="btn btn-primary" onclick="checkout()">ENVIAR PEDIDO POR WHATSAPP</button><p class="tiny">No se realiza ningún cobro en esta página. Al enviar el pedido abrirás WhatsApp para confirmar disponibilidad, envío, precio final y forma de pago con ETERNAL.</p></div></aside></div>
+<script>
+  // CONFIGURACIÓN: cambia el número por tu WhatsApp comercial, con indicativo de país y solo números.
+  // Colombia: 57 + número de celular. Ejemplo de formato: "573001234567" (usa tu número real).
+  const WHATSAPP_NUMBER = "PON_AQUI_TU_NUMERO";
+  // Reemplaza estos productos de demostración con modelos, fotos y precios reales de Dropi.
+  const products = [
+    {id:1,name:"Clásico Dorado",category:"Clásicos",price:89900,description:"Un diseño versátil para elevar tus looks diarios.",image:"assets/reloj-1.jpg",tag:"DESTACADO"},
+    {id:2,name:"Azul Contemporáneo",category:"Modernos",price:99900,description:"Un toque de color con personalidad propia.",image:"assets/reloj-2.jpg",tag:"MODERNO"},
+    {id:3,name:"Elegancia Plateada",category:"Elegantes",price:94900,description:"Líneas limpias para ocasiones especiales.",image:"assets/reloj-3.jpg",tag:"ESENCIAL"},
+    {id:4,name:"Verde Esmeralda",category:"Modernos",price:109900,description:"Una esfera distintiva que no pasa inadvertida.",image:"assets/reloj-4.jpg",tag:"NOVEDAD"},
+    {id:5,name:"Acero Clásico",category:"Clásicos",price:84900,description:"Un básico atemporal para combinar fácilmente.",image:"assets/reloj-5.jpg",tag:"VERSÁTIL"},
+    {id:6,name:"Noche Dorada",category:"Elegantes",price:119900,description:"Un acabado sofisticado para destacar con sutileza.",image:"assets/reloj-6.jpg",tag:"PREMIUM"}
+  ];
+  let cart=[];
+  const cop=n=>new Intl.NumberFormat("es-CO",{style:"currency",currency:"COP",maximumFractionDigits:0}).format(n);
+  function renderProducts(filter="Todos"){
+    const list=products.filter(p=>filter==="Todos"||p.category===filter);
+    document.getElementById("product-grid").innerHTML=list.map(p=>`<article class="product"><div class="product-image"><span class="tag">${p.tag}</span><img src="${p.image}" alt="${p.name}" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;placeholder-watch&quot; aria-label=&quot;Imagen pendiente&quot;>◷</div>')"></div><div class="product-info"><div class="product-category">${p.category}</div><h3>${p.name}</h3><p>${p.description}</p><div class="price-row"><span class="price">${cop(p.price)}</span><button class="add-btn" onclick="addToCart(${p.id})">AÑADIR +</button></div></div></article>`).join("");
+  }
+  document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderProducts(b.dataset.filter)}));
+  function addToCart(id){const p=products.find(x=>x.id===id);const found=cart.find(x=>x.id===id);if(found)found.qty++;else cart.push({...p,qty:1});updateCart();document.getElementById("cart-backdrop").style.display="block"}
+  function removeItem(id){cart=cart.filter(x=>x.id!==id);updateCart()}
+  function updateCart(){document.getElementById("cart-count").textContent=cart.reduce((s,x)=>s+x.qty,0);document.getElementById("cart-total").textContent=cop(cart.reduce((s,x)=>s+x.price*x.qty,0));document.getElementById("cart-items").innerHTML=cart.length?cart.map(x=>`<div class="cart-item"><div><strong>${x.name}</strong><small>${x.qty} × ${cop(x.price)}</small></div><div><strong>${cop(x.price*x.qty)}</strong><br><button class="remove" onclick="removeItem(${x.id})">Quitar</button></div></div>`).join(""):'<p style="color:#aaa;font-size:13px">Tu bolsa está vacía. Explora la colección para añadir un reloj.</p>'}
+  function openCart(){document.getElementById("cart-backdrop").style.display="block"}function closeCart(){document.getElementById("cart-backdrop").style.display="none"}
+  function contactWhatsApp(message){if(WHATSAPP_NUMBER==="PON_AQUI_TU_NUMERO"){alert("Antes de usar los pedidos, configura WHATSAPP_NUMBER en el archivo index.html con tu número comercial.");return}window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank","noopener")}
+  function checkout(){if(!cart.length){alert("Añade al menos un producto a la bolsa.");return}const name=document.getElementById("customer-name").value.trim();const city=document.getElementById("customer-city").value.trim();const note=document.getElementById("customer-note").value.trim();if(!name||!city){alert("Escribe tu nombre y ciudad para preparar el mensaje.");return}const lines=cart.map(x=>`• ${x.name} — ${x.qty} x ${cop(x.price)} = ${cop(x.price*x.qty)}`).join("\n");const total=cop(cart.reduce((s,x)=>s+x.price*x.qty,0));const msg=`Hola, quiero confirmar este pedido de ETERNAL Watches:\n\n${lines}\n\nTotal estimado de productos: ${total}\nNombre: ${name}\nCiudad: ${city}\nNota: ${note||"Sin nota"}\n\nPor favor, confirmen disponibilidad, costo de envío, total final y opciones de pago antes de procesarlo.`;contactWhatsApp(msg)}
+  document.getElementById("year").textContent=new Date().getFullYear();renderProducts();updateCart();
+</script>
+</body>
+</html>
